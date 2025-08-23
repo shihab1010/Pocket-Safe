@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pocket Safe</title>
+    <!-- css link -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- daisy UI CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="bg-[#F4F5F7] h-[100vh] flex justify-center items-center">
+    <form action="" class="bg-white p-5 rounded-xl w-[350px]">
+      <div>
+        <label for="number" class="font-medium">Mobile Number</label> <br />
+        <input
+          type="text"
+          placeholder="Enter your number"
+          id="number"
+          class="input input-accent mt-2 bg-[#F4F5F7] rounded-[32px]"
+        />
+      </div>
+      <div class="mt-5">
+        <label for="pin" class="font-medium">4 Digit Pin</label> <br />
+        <input
+          type="text"
+          id="pin"
+          placeholder="Enter 4 Digit Pin"
+          class="input input-accent mt-2 bg-[#F4F5F7] rounded-[32px]"
+        />
+      </div>
+      <button class="btn btn-info w-full mt-5 rounded-[32px]">Info</button>
+    </form>
+  </body>
+</html>
