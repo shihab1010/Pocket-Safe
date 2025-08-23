@@ -15,8 +15,15 @@
     <!-- Tailwind CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
-  <body class="bg-[#F4F5F7] h-[100vh] flex justify-center items-center">
-    <form action="" class="bg-white p-5 rounded-xl w-[350px]">
+  <body
+    class="bg-[#F4F5F7] h-[100vh] flex flex-col justify-center items-center"
+  >
+    <div
+      class="w-[300px] h-[150px] bg-[url(assets/bg.png)] bg-cover flex justify-center items-center"
+    >
+      <img src="./assets/Group.png" alt="" />
+    </div>
+    <form action="" class="bg-white p-8 rounded-xl w-[350px]">
       <div>
         <label for="number" class="font-medium">Mobile Number</label> <br />
         <input
@@ -35,7 +42,14 @@
           class="input input-accent mt-2 bg-[#F4F5F7] rounded-[32px]"
         />
       </div>
-      <button class="btn btn-info w-full mt-5 rounded-[32px]">Info</button>
+      <button
+        id="login-button"
+        class="btn btn-info w-full mt-5 rounded-[32px] text-white"
+      >
+        Login
+      </button>
     </form>
+
+    <script src="script.js"></script>
   </body>
 </html>
