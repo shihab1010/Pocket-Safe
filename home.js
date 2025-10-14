@@ -1,5 +1,6 @@
 const validPin = 1234;
 const validCoupon = "a123";
+const tranjactionCOntainer = [];
 //...... reusable function.........
 
 // get value as INT
@@ -47,7 +48,7 @@ function toggoleFeature(id1, id2) {
 
 // >>>><<<<<<<<<<<<>>>>>>>>>><<<<<<<<<<<<>>>>>>>>><<<<<<<<
 
-// add amount
+// add Money
 
 document
   .getElementById("add-ammount-btn")
@@ -79,6 +80,12 @@ document
     const newAvailBalance = availbalance + addAmmount;
     setInnerText(newAvailBalance);
     alert("Ammount added succesfully.");
+
+    const data = {
+      name: "Add Money",
+      time: new Date().toLocaleTimeString(),
+    };
+    tranjactionCOntainer.push(data);
   });
 
 //   cashout
@@ -112,6 +119,11 @@ document
     const newAvailBalance = availbalance - withdrawAmount;
     setInnerText(newAvailBalance);
     alert("Ammount withdraw succesfully.");
+    const data = {
+      name: "CashOut",
+      time: new Date().toLocaleTimeString(),
+    };
+    tranjactionCOntainer.push(data);
   });
 
 // transfer money
@@ -145,6 +157,11 @@ document
     const newAvailBalance = availbalance - transferAmount;
     setInnerText(newAvailBalance);
     alert("Ammount transfer succesfully.");
+    const data = {
+      name: "Transfer Money",
+      time: new Date().toLocaleTimeString(),
+    };
+    tranjactionCOntainer.push(data);
   });
 
 // get bonus
@@ -159,9 +176,14 @@ document.getElementById("bonus-btn").addEventListener("click", function (e) {
   const newAvailBalance = availbalance + 100;
   setInnerText(newAvailBalance);
   alert("Bonus added succesfully.");
+  const data = {
+    name: "Get Bonus",
+    time: new Date().toLocaleTimeString(),
+  };
+  tranjactionCOntainer.push(data);
 });
 
-// pay now
+// pay Bill
 document.getElementById("pay-btn").addEventListener("click", function (e) {
   e.preventDefault();
   const billerAccountNumber = getValueString("biller-account-number");
@@ -196,8 +218,32 @@ document.getElementById("pay-btn").addEventListener("click", function (e) {
   const newAvailBalance = availbalance - payAmount;
   setInnerText(newAvailBalance);
   alert("Paid succesfully.");
+  const data = {
+    name: "Pay Bill",
+    time: new Date().toLocaleTimeString(),
+  };
+  tranjactionCOntainer.push(data);
 });
-
+// Transactions
+document.getElementById("tranjactions").addEventListener("click", function (e) {
+  e.preventDefault();
+  for (const tranjaction of tranjactionCOntainer) {
+    const div = document.createElement("div");
+    div.innerHTML = `
+   <div
+            class="flex items-center justify-between mt-1 w-96 bg-white rounded-xl shadow-md px-5 py-4 border border-gray-200"
+          >
+            <div>
+              <h2 class="text-gray-900 font-semibold text-lg">
+               ${tranjaction.name}
+              </h2>
+              <p class="text-gray-500 text-sm"> ${tranjaction.time}</p>
+            </div>
+          </div>
+   `;
+    document.getElementById("transactions-div").appendChild(div);
+  }
+});
 //   toggoling section
 
 // for add money
@@ -224,4 +270,8 @@ document.getElementById("get-bonus").addEventListener("click", function () {
 // for pay bill
 document.getElementById("pay-bill").addEventListener("click", function () {
   toggoleFeature("pay-bill", "pay-bill-forms");
+});
+// for tranjactions
+document.getElementById("tranjactions").addEventListener("click", function () {
+  toggoleFeature("tranjactions", "tranjactions-forms");
 });

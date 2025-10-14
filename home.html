@@ -45,10 +45,11 @@
       <!-- welcome text -->
 
       <div class="max-w-lg mx-auto p-8">
-        <h1 class="text-[24px] font-bold">🔥 Welcome to Payooo!</h1>
+        <h1 class="text-[24px] font-bold">🔥 Welcome to Pocket Safe!</h1>
         <p class="text-[#08080880]">
-          Enjoy easy and convenient financial services with us. Cashout charge
-          is low and
+          Welcome to Pocket Safe. Your smart companion for managing expenses
+          Stay organized, stay in control, and save more every day.Enjoy easy
+          and convenient financial services with us.
         </p>
       </div>
 
@@ -93,6 +94,7 @@
           <p class="text-center text-[#080808b3] mt-2">Pay Bill</p>
         </div>
         <div
+          id="tranjactions"
           class="card border-1 border-[#0808081a] min-h-[50px] p-3 rounded-xl"
         >
           <img src="./assets/transaction1.png" class="mx-auto" alt="" />
@@ -331,6 +333,12 @@
             Pay Now
           </button>
         </form>
+      </div>
+
+      <!-- Tranjactions form -->
+      <div id="tranjactions-forms" class="hidden form">
+        <h1 class="font-bold mb-4 max-w-lg mx-auto">Transaction History</h1>
+        <div id="transactions-div" class="max-w-lg mx-auto"></div>
       </div>
     </div>
     <script src="./home.js"></script>
