@@ -25,6 +25,15 @@
     </div>
     <form action="" class="bg-white p-8 rounded-xl w-[350px]">
       <div>
+        <label for="full-name" class="font-medium">Full Name</label> <br />
+        <input
+          type="text"
+          placeholder="Enter your Full Name"
+          id="full-name"
+          class="input input-accent mt-2 bg-[#F4F5F7] rounded-[32px]"
+        />
+      </div>
+      <div class="mt-5">
         <label for="phn-number" class="font-medium">Mobile Number</label> <br />
         <input
           type="text"
@@ -34,22 +43,34 @@
         />
       </div>
       <div class="mt-5">
-        <label for="pin-number" class="font-medium">4 Digit Pin</label> <br />
+        <label for="pinnumber" class="font-medium">4 Digit Pin</label> <br />
         <input
           type="text"
-          id="pin-number"
+          id="pinnumber"
           placeholder="Enter 4 Digit Pin"
           class="input input-accent mt-2 bg-[#F4F5F7] rounded-[32px]"
         />
       </div>
+      <div class="mt-5">
+        <label for="confirm-pin-number" class="font-medium"
+          >Confirm Your Pin</label
+        >
+        <br />
+        <input
+          type="text"
+          id="confirm-pin-number"
+          placeholder="Confirm  Pin"
+          class="input input-accent mt-2 bg-[#F4F5F7] rounded-[32px]"
+        />
+      </div>
       <button
-        id="login-button"
+        id="signup-button"
         class="btn btn-info w-full mt-5 rounded-[32px] text-white"
       >
-        Login
+        Sign Up
       </button>
-      <div id="sign-up" class="text-right mt-5 text-sky-600">
-        <button>Sing Up</button>
+      <div id="go-to-signin" class="text-right mt-5 text-sky-600">
+        <button>Go to Sing In</button>
       </div>
     </form>
 

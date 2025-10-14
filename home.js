@@ -1,6 +1,17 @@
-const validPin = 1234;
+const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+
+if (currentUser) {
+  const currentUserName = currentUser.name;
+  document.getElementById("current-user-name").innerText = currentUserName;
+  window.validPin = parseInt(currentUser.pin);
+} else {
+  window.location.href = "./index.html";
+}
+console.log(validPin);
+
 const validCoupon = "a123";
 const tranjactionCOntainer = [];
+
 //...... reusable function.........
 
 // get value as INT
@@ -18,7 +29,7 @@ function getValueString(id) {
 // get Inner text
 
 function getInnerText(id) {
-  const innertext = document.getElementById("avail-balance").innerText;
+  const innertext = document.getElementById(id).innerText;
   return innertext;
 }
 
@@ -274,4 +285,9 @@ document.getElementById("pay-bill").addEventListener("click", function () {
 // for tranjactions
 document.getElementById("tranjactions").addEventListener("click", function () {
   toggoleFeature("tranjactions", "tranjactions-forms");
+});
+
+// log out
+document.getElementById("log-out").addEventListener("click", function () {
+  window.location.href = "./index.html";
 });

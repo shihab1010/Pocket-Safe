@@ -23,25 +23,30 @@
   <body class="bg-[#F4F5F7] h-[100vh]">
     <div class="bg-white max-w-lg mx-auto rounded-b-3xl">
       <!-- nav section -->
-      <nav
-        class="min-h-[100px] flex justify-between p-8 items-center max-w-lg mx-auto border-b-1 border-gray-400"
-      >
-        <div class="flex">
-          <img src="./assets/Group.png" class="h-[50px]" alt="" />
-          <div class="ml-2">
-            <h3 class="font-bold">$ <span id="avail-balance">45000</span></h3>
-            <p class="text-[#08080880]">Available Balance</p>
+      <div class="max-w-lg mx-auto">
+        <h1 class="text-2xl font-bold pt-5 text-center">
+          Hi!, <span id="current-user-name">shihab</span>
+        </h1>
+        <div
+          class="min-h-[100px] flex justify-between p-8 items-center border-b-1 border-gray-400"
+        >
+          <div class="flex">
+            <img src="./assets/Group.png" class="h-[50px]" alt="" />
+            <div class="ml-2">
+              <h3 class="font-bold">$ <span id="avail-balance">45000</span></h3>
+              <p class="text-[#08080880]">Available Balance</p>
+            </div>
+          </div>
+          <div id="log-out" class="">
+            <button class="btn text-[#08080880]">
+              <i
+                class="fa-solid fa-arrow-right-from-bracket rotate-180 text-gray-700"
+              ></i
+              >Log Out
+            </button>
           </div>
         </div>
-        <div class="">
-          <button class="btn text-[#08080880]">
-            <i
-              class="fa-solid fa-arrow-right-from-bracket rotate-180 text-gray-700"
-            ></i
-            >Log Out
-          </button>
-        </div>
-      </nav>
+      </div>
       <!-- welcome text -->
 
       <div class="max-w-lg mx-auto p-8">
@@ -212,6 +217,21 @@
       <div id="transfer-money-forms" class="hidden form">
         <h1 class="font-bold mb-4 max-w-lg mx-auto">Transfer Money</h1>
         <form action="" class="bg-white p-8 rounded-xl max-w-lg mx-auto">
+          <div>
+            <label class="font-medium">Select A Bank</label> <br />
+            <select
+              id="bank"
+              class="select select-accent mt-2 bg-[#F4F5F7] rounded-[32px] w-full"
+            >
+              <option>Select Bank</option>
+              <option>Dutch Bangla Bank</option>
+              <option>Sonali Bank</option>
+              <option>Islami Bank</option>
+              <option>Agrani Bank</option>
+              <option>IFIC Bank</option>
+            </select>
+          </div>
+
           <div class="">
             <label for="user-account-number" class="font-medium"
               >User Account Number</label
@@ -287,7 +307,7 @@
               id="bank"
               class="select select-accent mt-2 bg-[#F4F5F7] rounded-[32px] w-full"
             >
-              <option>Select back</option>
+              <option>Select bill</option>
               <option>Gas Bill</option>
               <option>Current Bill</option>
               <option>Utilities</option>
