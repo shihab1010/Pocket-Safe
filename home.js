@@ -238,6 +238,7 @@ document.getElementById("pay-btn").addEventListener("click", function (e) {
 // Transactions
 document.getElementById("tranjactions").addEventListener("click", function (e) {
   e.preventDefault();
+  document.getElementById("transactions-div").innerText = "";
   for (const tranjaction of tranjactionCOntainer) {
     const div = document.createElement("div");
     div.innerHTML = `
